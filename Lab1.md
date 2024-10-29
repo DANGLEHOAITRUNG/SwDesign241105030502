@@ -1,9 +1,12 @@
 #Lab 1
- Câu 1: Phân Tích Kiến Trúc
+ __Câu 1: Phân Tích Kiến Trúc__
+ 
      Đè xuất kiến trúc là 
- Câu 2: Cơ Chế Phân Tích
- Câu 3: Phân Tích Ca Sử Dụng Select Payment
- a. Xác định các lớp phân tích
+ __Câu 2: Cơ Chế Phân Tích__
+ 
+ __Câu 3: Phân Tích Ca Sử Dụng Select Payment__
+ __a. Xác định các lớp phân tích__
+ 
         - Các lớp phân tích
            + PaymentProcessor:Chịu trách nhiệm xử lý các phương thức thanh toán, bao gồm xác minh phương thức thanh toán của nhân viên và thực hiện các thao tác 
            thanh toán.
@@ -15,9 +18,11 @@
            + PayrollDatabase:Lưu trữ và quản lý dữ liệu nhân viên, thông tin payroll (bảng lương), bao gồm các phương thức thanh toán, lương hàng tháng, và chi 
             tiết payroll của từng nhân viên.
            + TransactionHistory:Chứa thông tin về lịch sử các giao dịch thanh toán của nhân viên, bao gồm ngày giao dịch, số tiền, và phương thức thanh toán.
- b. Mô tả hành vi thông qua biểu đồ tuần tự
+ __b. Mô tả hành vi thông qua biểu đồ tuần tự__
+ 
  ![Diagram](https://planttext.com/api/plantuml/png/Z9513e8m44NtSufUW0kmC13YqeH8F42bepIs7UmK3MTpuP6yWZQ461j2NC__x_-PUJsU1GVfms0D05-q4vuO0RQsDpGYYYpRY5gEdemfbTLES_0oaC_57gy3SeXJYow87OQEbAWwwSu8IvuP5kMJEXTDHtTHtgGsycWmWV4_FHeqsAOrLlFZeFRK8dC477ebGneDgMwfV4NkfBrTFy4lOLxeQvxY0Q10fpv_U0C00F__0m00)
- c. Xác định nhiệm vụ của từng lớp phân tích
+ __c. Xác định nhiệm vụ của từng lớp phân tích__
+ 
          - Employee:
            + Xem và chọn phương thức thanh toán phù hợp từ các tùy chọn, gồm DirectDepositPayment, MailPayment, và PickUpPayment.
            + Xác nhận phương thức thanh toán đã chọn để thực hiện giao dịch.
@@ -42,7 +47,9 @@
          - TransactionHistory:
            + Ghi lại chi tiết giao dịch bao gồm ngày, phương thức thanh toán, số tiền và các chi tiết liên quan khác để phục vụ cho báo cáo và đối chiếu trong 
              tương lai.
- d. Xác dịnh một số thuộc tính và quan hệ giữa các lớp phân tích
+ __d. Xác dịnh một số thuộc tính và quan hệ giữa các lớp phân tích__
+       ![Diagram](https://planttext.com/api/plantuml/png/Z5HBJiCm4Dtd5BE4HIuGLLKh1Gca5bLy3k0uLcFXs94zgOY04t0A5brMi62LBhf0uXuv0LV09Q5DY2kQHHHdPjvdPkIlzMPaa6ZCK-5HGOo1ipGJgc0C7ZpuULZpuo8Cu1erb_Cca94YPHAd31CL1p1h7viKGmJHHG2XoYF1l2Ul8MboPrfHPepIEpBKH1f2aIlPuoEfoYKwmRGI8YH88cBwmgyOLJes0KoumS6ll-4Uu6PFUcvJb2vSUYm-i-JsVRp_Fv8FDjHA8P6nP1IXqw4QRISdgnlM14zE0rWe7k-TX5mpYY7BbE7OP06xHoRZGv0HaNTZIckTdNvhbQCzNUPfn7HRQiqr9LmSHv7QJ5iwZcDjnVUHPfpUtMR7OMKsDyycYfBjJDfOkyNr_M5l9m8Gds-v7MUrVWLCFjxb7AmvhxU8xcBKUG6BgbpAVuiTonJ0FE4WawfSIPXpeY2kriyqESZUyXs0gTQhRS7Iskp61e--xnovAwyrBbUuCmFFOS8bRMjBLEKB1sg_a5Vb1Zi6lP4TvVPk-GO00F__0m00)
+       
        - Employee:
             + Thuộc tính:
              employeeID: Mã định danh của nhân viên.
