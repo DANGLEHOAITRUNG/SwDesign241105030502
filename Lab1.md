@@ -1,6 +1,7 @@
 #Lab 1
  __Câu 1: Phân Tích Kiến Trúc__
-    __a. Đề xuất kiến trúc__
+ 
+   __a. Đề xuất kiến trúc__
     
          Kiến trúc đề xuất cho hệ thống Payroll System là kiến trúc phân lớp (Layered Architecture). Đây là kiến trúc phù hợp cho các hệ thống có tính chất phức tạp và yêu cầu bảo trì 
          cao, giúp tách biệt các thành phần chức năng để dễ dàng quản lý, nâng cấp và mở rộng.
@@ -155,7 +156,8 @@
             + Quan hệ:
               PickUpPayment có quan hệ với TransactionHistory để ghi lại giao dịch khi Employee nhận lương tại địa điểm đăng ký.
  __Câu 4: Phân Tích Ca Sử Dụng Maintain Timecard__
-        __a. Xác định các lớp phân tích__
+ 
+   __a. Xác định các lớp phân tích__
         
             - TimecardManager: 
                + Lớp này chịu trách nhiệm quản lý và duy trì thông tin về timecard.
