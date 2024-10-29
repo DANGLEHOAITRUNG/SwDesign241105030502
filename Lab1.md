@@ -31,7 +31,7 @@
                 
   __c. Biểu đồ package mô tả kiến trúc__
   
-      ![Diagram](https://planttext.com/api/plantuml/png/Z9HBJiCm48RtEONL5Inw0HQeHI21H2L4om46PzfQE4xgHzK8iMRD6H12GaBiMw4koaLo0gw0xJxZjAMpc8Nz-v_FCqv-9zE6qY2rINWKPK0Ve8UaTWEvJ3adxLnfJ6haCI8sV5fh92eK6ZHB1Rc67ELIvu9oK8hSAPHNGgFi0iMDNHyyxJ5nT5nULCYHQbi_iTujrFqq3YK920lGOGbIa9kxJz4ybpcRMSOPtOkv8McZ7B8gQoPJYaejk6vnO53fxM0NISRJ70y7F3EA2Mk-YsunZ9Ptbo4P1KuD1urju23paAaF8kQuuAwWk0YgBR5tb8Cutd8n7oQBBSR1rpu73QH9wVytTyfxK9MXA1Ykkkqq8L0NDUrt90W5rCtsaYcTLbla5lTXkrn-oFNwwROtSq9glMBooKW--p245kDtGtvUYl5KrBp9bYFEAPYlTHbP5y9dt_uJeRPbNh3N91nRrKKl57EReEW6nwhRra9BavEHASPlciJ5v8jmLaoUJPaeBBt3Qs1jNeK7MgFOHz504Rk_pny0003__mC0)
+   ![Diagram](https://planttext.com/api/plantuml/png/Z9HBJiCm48RtEONL5Inw0HQeHI21H2L4om46PzfQE4xgHzK8iMRD6H12GaBiMw4koaLo0gw0xJxZjAMpc8Nz-v_FCqv-9zE6qY2rINWKPK0Ve8UaTWEvJ3adxLnfJ6haCI8sV5fh92eK6ZHB1Rc67ELIvu9oK8hSAPHNGgFi0iMDNHyyxJ5nT5nULCYHQbi_iTujrFqq3YK920lGOGbIa9kxJz4ybpcRMSOPtOkv8McZ7B8gQoPJYaejk6vnO53fxM0NISRJ70y7F3EA2Mk-YsunZ9Ptbo4P1KuD1urju23paAaF8kQuuAwWk0YgBR5tb8Cutd8n7oQBBSR1rpu73QH9wVytTyfxK9MXA1Ykkkqq8L0NDUrt90W5rCtsaYcTLbla5lTXkrn-oFNwwROtSq9glMBooKW--p245kDtGtvUYl5KrBp9bYFEAPYlTHbP5y9dt_uJeRPbNh3N91nRrKKl57EReEW6nwhRra9BavEHASPlciJ5v8jmLaoUJPaeBBt3Qs1jNeK7MgFOHz504Rk_pny0003__mC0)
       
  __Câu 2: Cơ Chế Phân Tích__
  
@@ -62,6 +62,7 @@
             Kết quả mong đợi: Hệ thống có khả năng phát hiện và thông báo lỗi kịp thời, cung cấp các báo cáo lỗi chi tiết để đội ngũ bảo trì khắc phục nhanh chóng. Đồng thời, hỗ trợ các 
           tính năng bảo trì định kỳ để cập nhật và duy trì hiệu năng.
  __Câu 3: Phân Tích Ca Sử Dụng Select Payment__
+ 
  __a. Xác định các lớp phân tích__
  
         - Các lớp phân tích
@@ -198,7 +199,8 @@
               timecardRecords: Lưu trữ chi tiết tất cả các timecard, trong đó mỗi record chứa thông tin về thời gian làm việc, mã nhân viên, và ngày làm việc.
             + Quan hệ: PayrollDatabase chứa thông tin liên quan đến Employee và cho phép TimecardManager thực hiện các thao tác dữ liệu liên quan đến timecard.
  __Câu 5: Hợp Nhát Kết Quả Phân Tích__
-    __a. Giới thiệu__
+ 
+   __a. Giới thiệu__
     
           Hệ thống Payroll System quản lý thông tin payroll của nhân viên, bao gồm các chức năng chính là Select Payment Method (chọn phương thức thanh toán) và Maintain Timecard (quản lý bảng chấm công). Hai chức năng này giúp nhân viên quản lý thông tin về phương thức nhận lương và thời gian làm việc, đảm bảo hệ thống có thể dễ dàng truy xuất, cập nhật thông tin thanh toán và bảng chấm công chính xác cho từng nhân viên.
    __b. Phân tích yêu cầu__
@@ -215,6 +217,7 @@
          Nhân viên tạo hoặc truy xuất bảng chấm công cho kỳ lương hiện tại.
          Nhân viên nhập số giờ làm việc theo từng dự án và ngày làm việc cụ thể.
          Hệ thống xác thực thông tin, lưu lại bảng chấm công và cập nhật chi tiết thời gian làm việc của nhân viên.
+         
    __c. Phân tích lớp__
    
        Các lớp phân tích chính:
@@ -228,11 +231,14 @@
      ![Diagram](https://planttext.com/api/plantuml/png/b5HBJiCm4Dtt55bI2IwG1IfG95WK8L69zIGUYga_aJr12eYJiU18N06diPsuiH1a4SNpUvbvR_pz-RMo18PQAHQr06kBQza8tI4MxukYVz2VRzTbyK26gzrWRw2Jg6Y3zAnPMTnFZqC4SOar6BP60YviMMozOV6ny619La2KXzEsQp15XBhMhQ9OxXBK_cAm-G3635hdkHW-Hfn9Q43nrUvQMQ59WIeNVGToX8zrVE5Gmv91f3IvvjIbbZVUN6cMgHRc4SezwzROHstsw0RAGrUDqIzOEvJxuMColS4GqdtWZAZ1d6_84M2q46iWgC16qdT8GGUtwacVp4MmBADIXfIsOK2O49f9E_rLDyk87aQJHuv2cY3_ad4QfJYcBYSq650MQk9QtN1BsdHX33Hwt8JS-Fgtbu_irLCMJBULm3-in8pr3IZOeObwPEpVBHmINq7mP02PoBAej1O8QhvwwLyuiTHEuDwPctvV8TuHPsVdHsqchiXJkkUzQxgySszOuBWX1o2l_sFDzhwenPnpJd0-BFpjCKFPLgQ-UVqLAjRVgJy0003__mC0)
      
    __d. Biểu đồ tuần tự hợp nhất__
-       Biểu đồ tuần tự cho quy trình chọn phương thức thanh toán (Select Payment Method):
-          ![Diagram](https://planttext.com/api/plantuml/png/R57DIWCn4BxdAOQUz23Uzo15wr5OB3x0c4nf8Cd4pAJGP_FGH-ehc2Mxe6jluSltoro_BrjHB5fZC6YL2xp67FXCP7A3lVKPay9cn7EazdWZFRA3FGMowZbj00N6ZlvJ50u1TgZuYKATkNisPac0XwT5Ei3BaLa8yfmJk-FyFJ4NrG3lz5L95D0vFtN003uT6EuQK4Za4QtbsamSAVeWzxSJny8dxsXjypkprHtW8plKTRD61JSlCutsTmkdWoyHQbTAjRRLkZrcuQxikzIPBIKttUO7003__mC0)
-       Biểu đồ tuần tự cho quy trình duy trì bảng chấm công (Maintain Timecard):
-          ![Diagram](https://planttext.com/api/plantuml/png/V95BRW8n38RtEON5dWkmG9J74WbLbBt9k2Lg7YF70N4s5Xo9A-0PIc4qj5ld_tv_IIwdyoGBifJW3Lf938jG-tGaChMEdNKrHe71sWMoo1KiCU8N1Oeo0ComdkdmDkCkiS8Z9-zXZe9RpDJ6L_EfCVSDC1nt-16yMKivW_miCy-dJLhn4RoJiACzWItCwl68wt6_K-E5OoyCbNhzexA8eZjtgN26G-9lwjjqWGrwfvrqOrwhVzHjujV1nLQZUPxNyhCKFns71r7QXbxx_Hv_4fMPKAoQNxu2003__mC0)
-    __e. Mối quan hệ giữa các lớp__
+   
+   Biểu đồ tuần tự cho quy trình chọn phương thức thanh toán (Select Payment Method):
+ ![Diagram](https://planttext.com/api/plantuml/png/R57DIWCn4BxdAOQUz23Uzo15wr5OB3x0c4nf8Cd4pAJGP_FGH-ehc2Mxe6jluSltoro_BrjHB5fZC6YL2xp67FXCP7A3lVKPay9cn7EazdWZFRA3FGMowZbj00N6ZlvJ50u1TgZuYKATkNisPac0XwT5Ei3BaLa8yfmJk-FyFJ4NrG3lz5L95D0vFtN003uT6EuQK4Za4QtbsamSAVeWzxSJny8dxsXjypkprHtW8plKTRD61JSlCutsTmkdWoyHQbTAjRRLkZrcuQxikzIPBIKttUO7003__mC0)
+ 
+   Biểu đồ tuần tự cho quy trình duy trì bảng chấm công (Maintain Timecard):
+  ![Diagram](https://planttext.com/api/plantuml/png/V95BRW8n38RtEON5dWkmG9J74WbLbBt9k2Lg7YF70N4s5Xo9A-0PIc4qj5ld_tv_IIwdyoGBifJW3Lf938jG-tGaChMEdNKrHe71sWMoo1KiCU8N1Oeo0ComdkdmDkCkiS8Z9-zXZe9RpDJ6L_EfCVSDC1nt-16yMKivW_miCy-dJLhn4RoJiACzWItCwl68wt6_K-E5OoyCbNhzexA8eZjtgN26G-9lwjjqWGrwfvrqOrwhVzHjujV1nLQZUPxNyhCKFns71r7QXbxx_Hv_4fMPKAoQNxu2003__mC0)
+  
+   __e. Mối quan hệ giữa các lớp__
     
        Employee: Tương tác với cả hai chức năng Select Payment Method và Maintain Timecard, giúp quản lý thông tin thanh toán và bảng chấm công của nhân viên.
        PayrollDatabase: Kết nối với các lớp TransactionHistory và TimecardManager để lưu trữ và quản lý các dữ liệu payroll của nhân viên.
