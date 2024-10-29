@@ -30,6 +30,7 @@
               tốc độ truy xuất dữ liệu.
                 
   __c. Biểu đồ package mô tả kiến trúc__
+  
       ![Diagram](https://planttext.com/api/plantuml/png/Z9HBJiCm48RtEONL5Inw0HQeHI21H2L4om46PzfQE4xgHzK8iMRD6H12GaBiMw4koaLo0gw0xJxZjAMpc8Nz-v_FCqv-9zE6qY2rINWKPK0Ve8UaTWEvJ3adxLnfJ6haCI8sV5fh92eK6ZHB1Rc67ELIvu9oK8hSAPHNGgFi0iMDNHyyxJ5nT5nULCYHQbi_iTujrFqq3YK920lGOGbIa9kxJz4ybpcRMSOPtOkv8McZ7B8gQoPJYaejk6vnO53fxM0NISRJ70y7F3EA2Mk-YsunZ9Ptbo4P1KuD1urju23paAaF8kQuuAwWk0YgBR5tb8Cutd8n7oQBBSR1rpu73QH9wVytTyfxK9MXA1Ykkkqq8L0NDUrt90W5rCtsaYcTLbla5lTXkrn-oFNwwROtSq9glMBooKW--p245kDtGtvUYl5KrBp9bYFEAPYlTHbP5y9dt_uJeRPbNh3N91nRrKKl57EReEW6nwhRra9BavEHASPlciJ5v8jmLaoUJPaeBBt3Qs1jNeK7MgFOHz504Rk_pny0003__mC0)
       
  __Câu 2: Cơ Chế Phân Tích__
