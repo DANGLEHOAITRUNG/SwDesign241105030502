@@ -49,7 +49,7 @@
   c. xác định được nhiệm vụ của từng lớp phân tích
 
   d. xác định một số thuộc tính và quan hệ giữa các lớp phân tích
-  e. Kết quả mong đợi là các biểu đồ lớp mô tả lớp phân tích và giải thích.
+  e. Biểu đồ mô tả lớp phân tích.
 3. Phân tích ca sử dụng Login
  a. Xác định các lớp phân tích cho ca sử dụng Login
   b. Mô tả được hành vi thông qua biểu đồ sequence
