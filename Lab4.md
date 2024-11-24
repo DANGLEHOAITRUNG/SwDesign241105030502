@@ -1,5 +1,5 @@
 # Lab 4: Thiết kế ca sử dụng cho hệ thống Payroll System
-### Ca sử dụng: Timecard
+### Timecard
 #### Mô tả sự tương tác giữa các đối tượng thiết kế
 Tác nhân: Nhân viên, người quản trị hệ thống
 
