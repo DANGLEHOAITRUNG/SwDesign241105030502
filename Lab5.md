@@ -14,69 +14,68 @@
     Chức năng chính:
     - Quản lý thời gian làm việc của nhân viên và trạng thái thẻ chấm công
     Thành phần chính:
-    1. **`TimecardController`**:
+    1. TimecardController:
     - Quản lý logic nghiệp vụ liên quan đến thẻ chấm công, bao gồm: 
      - Nhận thông tin giờ vào/ra từ giao diện người dùng.
      - Tính toán tổng số giờ làm việc hàng ngày.
-    2. **`Timecard`**:
+    2. Timecard:
     - Thực thể lưu trữ thông tin giờ làm việc, gồm:
      - ID nhân viên, ngày giờ vào/ra, tổng giờ làm việc.
-    3. **`ProjectManagementDatabase`**:
+    3. ProjectManagementDatabase:
     - Lưu trữ thông tin danh sách dự án liên quan.
     - Thông tin thẻ chấm công theo từng dự án.
     Mô tả chi tiết:
-
     - Nhân viên sử dụng hệ thống để chấm công vào và ra.
     - Thông tin giờ làm việc được tính toán tự động và lưu trữ trong cơ sở dữ liệu.
     - Hệ thống hỗ trợ nhân viên gửi yêu cầu nghỉ phép, đồng thời cập nhật trạng thái thẻ chấm công khi cần.
 
  __ 3. Payroll Processing Subsystem __
  
-    #### **Chức năng chính:**
+    Chức năng chính:
      - Tính toán lương cho nhân viên dựa trên dữ liệu từ hệ thống chấm công và thực hiện thanh toán lương.
 
-    #### **Thành phần chính:**
-     1. **`PayrollController`**:
+    Thành phần chính:
+     1. PayrollController:
     - Quản lý logic nghiệp vụ tính toán lương dựa trên thông tin giờ làm việc và các yếu tố khác.
-    2. **`Paycheck`**:
+    2. Paycheck:
     - Thực thể chứa thông tin phiếu lương:
      - ID phiếu lương, ID nhân viên, số lương, ngày phát hành.
-    3. **`BankSystemProxy`**:
+    3. BankSystemProxy:
     - Kết nối với hệ thống ngân hàng để thực hiện thanh toán.
-    4. **`PayrollDatabase`**:
+    4. PayrollDatabase:
     - Lưu trữ thông tin chi tiết về lương, hỗ trợ cho báo cáo và tra cứu.
 
-    #### **Mô tả chi tiết:**
+    Mô tả chi tiết:
     - PayrollController lấy dữ liệu từ Timecard Subsystem và Employee Management Subsystem để tính toán lương.
     - Lương được gửi qua ngân hàng hoặc in phiếu lương tùy thuộc vào cấu hình.
     - Dữ liệu phiếu lương được lưu trữ trong PayrollDatabase để hỗ trợ cho các báo cáo tài chính.
  __4. Bank Interaction Subsystem (Tương tác ngân hàng): __
  
-    ####  Mô tả: 
+    Mô tả: 
     - Tích hợp với các hệ thống ngân hàng để thực hiện giao dịch.
-    ####  Thành phần chính:
+     Thành phần chính:
     + IBankSystem (interface): Định nghĩa giao diện giao tiếp ngân hàng.
     + BankSystem (subsystem): Hiện thực giao tiếp với ngân hàng.
     + BankInformation, Paycheck (entities): Dữ liệu cần thiết cho giao dịch.
-    #### Chức năng chính:
+    Chức năng chính:
     + Thực hiện chuyển khoản lương.
     + Kiểm tra trạng thái giao dịch.
  __ 5. Printing Subsystem (In phiếu lương): __
  
-    #### Mô tả: Quản lý in ấn cho phiếu lương nhân viên 
-    ####  Thành phần chính:
+    Mô tả: Quản lý in ấn cho phiếu lương nhân viên 
+    Thành phần chính:
     + IPrintService (interface): Giao diện chuẩn hóa cho dịch vụ in.
     + PrintService (subsystem): Hiện thực logic in phiếu lương.
     + Paycheck (entity): Dữ liệu phiếu lương.
-    #### Chức năng chính:
+     Chức năng chính:
     + In hoặc xuất phiếu lương dưới dạng tệp.
     + Quản lý trạng thái và kết quả in.
  __6. Project Management Subsystem (Quản lý dự án):__
  
-    ####  Mô tả: Cung cấp mã dự án cho các hoạt động chấm công.
-    #### Thành phần chính:
+    Mô tả: Cung cấp mã dự án cho các hoạt động chấm công.
+    Thành phần chính:
     + IProjectManagementDatabase (interface): Giao diện với hệ thống quản lý dự án.
     + ProjectManagementDatabase (subsystem): Hiện thực việc lấy dữ liệu dự án.
-    #### Chức năng chính:
+    Chức năng chính:
     + Lấy danh sách mã dự án từ cơ sở dự liệu.
     + Tích hợp với hệ thống quản lý dự án kế thừa.
