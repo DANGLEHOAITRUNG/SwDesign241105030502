@@ -1,53 +1,74 @@
 # Lab 6
 __1. Authentication Subsystem__
 
-    - Lớp thiết kế : LoginForm (Boundary)
+    1. Lớp Boundary : LoginForm
+        + Thuộc tính:
+            Không có thuộc tính .
+        + Phương thức:
+            enterUsername(username: String): void
+            enterPassword(password: String): void
+            clickLogin(): void
+    2. Lớp Controller : LoginController
+        + Thuộc tính:
+            Không có thuộc tính nào.
+        + Phương thức:
+            authenticateUser(username: String, password: String): boolean
+            redirectToDashboard(): void
+    3. Lớp Entity : AuthenticationService
+        + Thuộc tính:
+            Không có thuộc tính nào.
+        + Phương thức:
+            verifyCredentials(username: String, password: String): boolean
+            getUserDetails(username: String): User
+    4. Lớp Entity : User
         + Thuộc tính:
             username: String
             password: String
         + Phương thức:
-            submitLogin(): void
-          
-     - Lớp thiết kế : AuthenticationSystem (Control)
-        + Thuộc tính:
-            activeSession: Session
-        + Phương thức:
-            validateCredentials(username: String, password: String): Boolean
-            createSession(userID: String): Session
-            endSession(sessionID: String): void
-            
-      - Lớp thiết kế : UserDatabase (Entity)
-        + Thuộc tính:
-            users: List<User>
-        + Phương thức:
-            getUser(username: String): User
-            saveUser(user: User): void
+            getRole(): String
+
+![Diagram](https://planttext.com/api/plantuml/png/d98nJiCm68Ltd-BVcahq0XrGKIec1aJX0AxparXrxCfsWX3Y94oiBEnawD2Jv0HS0TjrchR9X2VdvULzp_dzs-mMnb9jgr8GGYOmYmlkLCxbyP4mGOqvYBTAb_16m2sK5lMJGIrfYKaLDtDOMSrbFkqzz-xh5wMpP1itvnucEDk4y6GASwWLpyWxEOMcIbgjX40TqRIoXOlcZ5hq3GRqAnYmNFHQAO5KXWYD6TV8xADQKbEi5NNzXdWV7faT0hh4e7QOSpL7--1G8J3AnyYRlZjNSeMwvWmZeqRDdrzJryqxg33_E9XZ-zPBj9IF17YxV-yBJI3TVp8GVFybOTF-x2pal6s-AR2Wjyt75bYX3bCW_GMOpQul9qCk9-KzesSbut_0-qEn1ShCtyW_0000__y30000)
             
 __2. Maintain Timecard Subsystem__
 
-    - Lớp thiết kế : TimecardController (Control)
-        + Thuộc tính:
-            timecards: List<Timecard>
+    1. Lớp Boundary : TimecardForm
         + Phương thức:
-            createTimecard(employeeID: String, date: Date): Timecard
-            updateTimecard(timecard: Timecard): void
-            submitTimecard(timecardID: String): void
-     - Lớp thiết kế : Timecard (Entity)
-        + Thuộc tính:
-            timecardID: String
-            employeeID: String
-            date: Date
-            workHours: Map<ProjectID, Float>
-            status: String (e.g., "draft", "submitted")
+            displayTimecard(): void
+            enterHours(): void
+            displayChargeCodes(): void
+            saveTimecard(): void
+    2. Lớp Controller : TimecardController
         + Phương thức:
-            calculateTotalHours(): Float
-            
-    - Lớp thiết kế : ProjectManagementDatabase (Entity)
-        + Thuộc tính:
-            projects: List<Project>
+            getCurrentTimecard(forEmployee: Employee): Timecard
+            getChargeNums(): ChargeNumList
+            updateTimecard(withEntry: TimecardEntry): void
+            saveTimecard(): void
+    3. Lớp Entity : IProjectManagementDatabase
         + Phương thức:
-            getProjectCodes(): List<String>
-            
+            getChargeNumbers(criteria: String): ChargeNumList
+    4. Lớp Entity : ChargeNumList
+        + Phương thức:
+            create(): void
+            add(): void
+            delete(): void
+    5. Lớp Entity : Timecard
+        + Phương thức:
+            getTotalHours(): float
+            updateTimecard(entry: TimecardEntry): void
+            save(): void
+    6. Lớp Entity : TimecardEntry
+        + Thuộc tính:
+            dayOfWeek: String
+            numHours: float
+    7. Lớp Entity : PayPeriod
+        + Thuộc tính:
+            startDate: Date
+            endDate: Date
+    8. Lớp Entity : Employee
+        + Phương thức:
+            add(timecard: Timecard): void
+            getEmployeeID(): int
+   ![Diagram](https://planttext.com/api/plantuml/png/Z5IzJiCm4Dxp5Dv81rwWGXKYWAZ4JoMGc8_u6WnENDaEAAfu4YPM5dOwCF0aVG9UWOiRkqcR8hB4kSztzzrtT_bPV1qQ2zgMkOpssFboyJfZDoB753G_LJfdyP4g2mww6aIf16Eww3nYz71XPX8gZyG3PyN2eZvJfJQDeRcMt8FEC54SFM3W2LlEBz4MbKGLLYifKREuEM_oQLrPiShG9gNMH2F4dYfzai-agX27p9y6R1Y214V7yRBCYIB1uVDS6Elkb3CETatwMTZx4yfVhKEvpzhvIGdUKwP7MjME9rezO6ele80CSs9-31Rkm22BnxMQKqXn40b__CjXlbNA7L8dKYt8MS2GNLijYcoxkXQV3i1YgaZOC0TTS9KkrKYgD5q5xYU1eqHdxkdiPjXW3mNSA0kocIDYEvKAUdk0_z6_LtS_2PjSWdqU2h9Dz7MUJWgYwvt6nouNDQklRCTkL-qhiDajgAwcjuYFpBVCcOioTv84GLev9b1DgCTgIziri8hjDfyc1YbA_MhMbhTDBcxo_POoARxV2_Qu_FooB1FBnGUmrDdhf57djx2_F-hPowXdLTitT-5UqLruTtvtNFfZLORiuA0qE1e5tmujruqk58IC3ack-j_v2m00__y30000)         
 3. Payroll Processing Subsystem
    
        - Lớp thiết kế : PayrollController (Control)
